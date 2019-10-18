@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RouterLink } from '@angular/router';
 import { SignupComponent } from './signup/signup.component';
+import { SelectionsListComponent } from './selections-list/selections-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    SelectionsListComponent
   ],
   imports: [
     BrowserModule,
