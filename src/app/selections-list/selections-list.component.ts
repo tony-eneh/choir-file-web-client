@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import { SelectionsService } from '../selections.service';
 
 @Component({
     selector: 'app-selections-list',
@@ -6,5 +7,12 @@ import {Component} from '@angular/core';
     styleUrls: ['./selections-list.component.css']
 })
 export class SelectionsListComponent {
-    selections = [{name: 'chai'}, {name: 'another selection'}];
+    constructor(private selectionsService: SelectionsService){}
+
+    selections = this.selectionsService.getSelections();
+
+    viewSelection(id){
+        this.selectionsService.currentSelection = this.selectionsService.getSelection(id);
+        console.log`${this.selectionsService.currentSelection}`;
+    }
 }

@@ -7,6 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { RouterLink } from '@angular/router';
 import { SignupComponent } from './signup/signup.component';
 import { SelectionsListComponent } from './selections-list/selections-list.component';
+import { SelectionsService } from './selections.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { SelectionsListComponent } from './selections-list/selections-list.compo
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [RouterLink],
+  providers: [SelectionsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
