@@ -6,8 +6,7 @@ import { Observable } from 'rxjs';
 })
 export class SelectionsService {
   selections = [{id: 1, name: 'chai', date: Date.now(), type: 'Mass Selection'}, {id: 2, name: 'another selection', date: (Date.now() + 2), type: 'Benediction selection' }];
-  currentSelection = {};
-  
+
   constructor() { }
 
   getSelections() {

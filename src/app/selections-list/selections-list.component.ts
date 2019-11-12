@@ -13,8 +13,6 @@ export class SelectionsListComponent {
     selections = this.selectionsService.getSelections();
 
     viewSelection(id){
-        this.selectionsService.currentSelection = this.selectionsService.getSelection(id);
-        console.log`${this.selectionsService.currentSelection}`;
         this.router.navigate(['selections', id]);
     }
 }
