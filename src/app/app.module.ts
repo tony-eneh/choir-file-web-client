@@ -9,6 +9,7 @@ import { SignupComponent } from './signup/signup.component';
 import { SelectionsListComponent } from './selections-list/selections-list.component';
 import { SelectionsService } from './selections.service';
 import { SelectionDetailsComponent } from './selection-details/selection-details.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SelectionDetailsComponent } from './selection-details/selection-details
     LoginComponent,
     SignupComponent,
     SelectionsListComponent,
-    SelectionDetailsComponent
+    SelectionDetailsComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

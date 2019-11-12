@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
 import { SelectionsListComponent } from './selections-list/selections-list.component';
 import { SelectionDetailsComponent } from './selection-details/selection-details.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'selections', component: SelectionsListComponent},
   {path: 'selections/:id', component: SelectionDetailsComponent},
-  {path: '', component: AppComponent}
+  {path: '', redirectTo: '/login', pathMatch:'full'},
+  {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({

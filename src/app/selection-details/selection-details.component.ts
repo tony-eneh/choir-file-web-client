@@ -10,7 +10,7 @@ import { switchMap } from 'rxjs/operators';
 })
 export class SelectionDetailsComponent implements OnInit {
     selection = this.selectionsService.currentSelection;
-    
+
     constructor(
         private selectionsService: SelectionsService,
         private router: Router,
