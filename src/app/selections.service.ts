@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -10,13 +11,15 @@ export class SelectionsService {
     {id: 2, name: 'another selection', date: (new Date()).toDateString(), type: 'Benediction selection' }
   ];
 
-  constructor() { }
+  private apiUrl = 'localhost:3000';
+
+  constructor(private _http: HttpClient) { }
 
   getSelections() {
-    return this.selections;
+    return this._http.get(`${this.apiUrl}/selections`) as Observable<String[]>;
   }
 
   getSelection(id) {
-    return this.selections.find((el) => el.id === id);
+    return this._http.get(`${this.apiUrl}/selections/${id}`) as Observable<String[]>;
   }
 }
