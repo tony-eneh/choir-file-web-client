@@ -18,6 +18,7 @@ export class SelectionDetailsComponent implements OnInit {
         ) {}
 
     ngOnInit() {
-        this.selection = this.selectionsService.getSelection(+this.route.snapshot.paramMap.get('id'));
+        this.selectionsService.getSelection(this.route.snapshot.paramMap.get('id'))
+        .subscribe((selection: Object)=>{this.selection = selection});
       }
 }

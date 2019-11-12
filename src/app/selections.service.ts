@@ -20,6 +20,6 @@ export class SelectionsService {
   }
 
   getSelection(id) {
-    return this._http.get(`${this.apiUrl}/selections/${id}`) as Observable<String[]>;
+    return this._http.get(`${this.apiUrl}/selections/${id}`) as Observable<Object>;
   }
 }
