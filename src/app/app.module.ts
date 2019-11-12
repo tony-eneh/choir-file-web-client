@@ -24,7 +24,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [SelectionsService, ActivatedRouteSnapshot],
+  providers: [SelectionsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
