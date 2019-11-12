@@ -1,13 +1,23 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { SelectionsService } from '../selections.service';
+import { Router, ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
+import { switchMap } from 'rxjs/operators';
 
 @Component({
-    selector: 'app-selections-details',
-    templateUrl: './selections-details.component.html',
-    styleUrls: ['./selections-details.component.css']
+    selector: 'app-selection-details',
+    templateUrl: './selection-details.component.html',
+    styleUrls: ['./selection-details.component.css']
 })
-export class SelectionsListComponent {
-    constructor(private selectionsService: SelectionsService) {}
-
+export class SelectionDetailsComponent implements OnInit {
     selection = this.selectionsService.currentSelection;
+    
+    constructor(
+        private selectionsService: SelectionsService,
+        private router: Router,
+        private route: ActivatedRouteSnapshot
+        ) {}
+
+    ngOnInit() {
+        this.selection = this.selectionsService.getSelection(this.route.params.get('id'));
+      }
 }
