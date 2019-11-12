@@ -6,7 +6,7 @@ import { switchMap } from 'rxjs/operators';
 @Component({
     selector: 'app-selection-details',
     templateUrl: './selection-details.component.html',
-    styleUrls: ['./selection-details.component.css']
+    styleUrls: ['./selection-details.component.css'],
 })
 export class SelectionDetailsComponent implements OnInit {
     selection = this.selectionsService.currentSelection;
@@ -14,10 +14,10 @@ export class SelectionDetailsComponent implements OnInit {
     constructor(
         private selectionsService: SelectionsService,
         private router: Router,
-        private route: ActivatedRouteSnapshot
+        private route: ActivatedRoute
         ) {}
 
     ngOnInit() {
-        this.selection = this.selectionsService.getSelection(this.route.params.get('id'));
+        this.selection = this.selectionsService.getSelection(this.route.snapshot.paramMap.get('id'));
       }
 }
