@@ -1,6 +1,5 @@
 import {Component} from '@angular/core';
 import { SelectionsService } from '../selections.service';
-import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-selections-list',
@@ -8,13 +7,9 @@ import { Router } from '@angular/router';
     styleUrls: ['./selections-list.component.css']
 })
 export class SelectionsListComponent {
-    constructor(private selectionsService: SelectionsService, private router: Router){
+    constructor(private selectionsService: SelectionsService){
       this.selectionsService.getSelections().subscribe((selections: String[])=>{this.selections = selections});
     }
 
     selections: String[];
-
-    viewSelection(id){
-        this.router.navigate(['selections', id]);
-    }
 }
