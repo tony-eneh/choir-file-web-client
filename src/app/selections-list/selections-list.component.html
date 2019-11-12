@@ -1,3 +1,8 @@
 <ul>
-    <li *ngFor="let selection of selections" (click)="viewSelection(selection.id)"><button>{{selection.name | uppercase}}</button></li>
+    <li *ngFor="let selection of selections; let i = index" (click)="viewSelection(selection._id)">
+      <span>{{i+1}}</span>&nbsp;
+      <span>{{selection.event}} Selection</span>&nbsp;
+      <span>for {{selection.venue}}</span>&nbsp;
+      <span>Date: {{selection.date}}</span>
+    </li>
 </ul>

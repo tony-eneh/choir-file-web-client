@@ -8,9 +8,11 @@ import { Router } from '@angular/router';
     styleUrls: ['./selections-list.component.css']
 })
 export class SelectionsListComponent {
-    constructor(private selectionsService: SelectionsService, private router: Router){}
+    constructor(private selectionsService: SelectionsService, private router: Router){
+      this.selectionsService.getSelections().subscribe((selections: String[])=>{this.selections = selections});
+    }
 
-    selections = this.selectionsService.getSelections();
+    selections: String[];
 
     viewSelection(id){
         this.router.navigate(['selections', id]);

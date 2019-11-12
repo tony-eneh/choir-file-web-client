@@ -11,7 +11,7 @@ export class SelectionsService {
     {id: 2, name: 'another selection', date: (new Date()).toDateString(), type: 'Benediction selection' }
   ];
 
-  private apiUrl = 'localhost:3000';
+  private apiUrl = 'http://localhost:3000/api';
 
   constructor(private _http: HttpClient) { }
 
