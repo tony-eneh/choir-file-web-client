@@ -5,7 +5,10 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SelectionsService {
-  selections = [{id: 1, name: 'chai', date: Date.now(), type: 'Mass Selection'}, {id: 2, name: 'another selection', date: (Date.now() + 2), type: 'Benediction selection' }];
+  selections = [
+    {id: 1, name: 'chai', date: (new Date()).toDateString(), type: 'Mass Selection'},
+    {id: 2, name: 'another selection', date: (new Date()).toDateString(), type: 'Benediction selection' }
+  ];
 
   constructor() { }
 
