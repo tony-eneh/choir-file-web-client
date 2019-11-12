@@ -9,7 +9,7 @@ import { switchMap } from 'rxjs/operators';
     styleUrls: ['./selection-details.component.css'],
 })
 export class SelectionDetailsComponent implements OnInit {
-    selection = this.selectionsService.currentSelection;
+    public selection = {};
 
     constructor(
         private selectionsService: SelectionsService,
@@ -18,6 +18,6 @@ export class SelectionDetailsComponent implements OnInit {
         ) {}
 
     ngOnInit() {
-        this.selection = this.selectionsService.getSelection(this.route.snapshot.paramMap.get('id'));
+        this.selection = this.selectionsService.getSelection(+this.route.snapshot.paramMap.get('id'));
       }
 }
