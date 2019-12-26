@@ -11,6 +11,7 @@ import { SelectionsListComponent } from './selections-list/selections-list.compo
 import { SelectionsService } from './selections.service';
 import { SelectionDetailsComponent } from './selection-details/selection-details.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     SignupComponent,
     SelectionsListComponent,
     SelectionDetailsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,

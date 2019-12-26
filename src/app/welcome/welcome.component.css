@@ -1,0 +1,9 @@
+.welcome {
+    text-align: center;
+    line-height: 3em;
+}
+
+.welcome button.signup,
+.welcome button.login {
+    padding: .5em 1em
+}
