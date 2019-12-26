@@ -1,1 +1,12 @@
 1. LoginComponent | SignupComponent = Successfully retrieve from form on submit
+2. pages to implement in order
+
+a. Welcome
+b. Login
+c. Signup
+d. Dashboard
+e. Songs List
+f. Song Details
+g. Selections List
+h. Selection Details
+i. Profile pages
