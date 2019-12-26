@@ -1,4 +1,5 @@
 <div>
+    <a [routerLink]="['/selections', selection._id]" [queryParams]="{edit:''}">Edit Selection</a>
     <span>Selection:</span><span>{{selection.event}} Selection</span>
     <span>Held at</span><span>{{selection.venue}}</span>
     <span>Event Date</span><span>{{selection.date}}</span>
