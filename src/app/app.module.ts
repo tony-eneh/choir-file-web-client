@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { SelectionsService } from './selections.service';
 import { SelectionDetailsComponent } from './selection-details/selection-details.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { LoginAuthenticatorService } from './login-authenticator.service';
 
 @NgModule({
   declarations: [
@@ -26,9 +28,10 @@ import { WelcomeComponent } from './welcome/welcome.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [SelectionsService],
+  providers: [SelectionsService, LoginAuthenticatorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

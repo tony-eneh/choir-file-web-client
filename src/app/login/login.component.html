@@ -1,9 +1,10 @@
 <div>
-    <form (submit)="onSubmit($event)">
+    <div class="alert"></div>
+    <form (ngSubmit)="onSubmit($event)" #loginForm="ngForm">
         <label for="username">username</label>
-        <input type="text" name="username" id="username">
+        <input type="text" name="username" id="username" [(ngModel)]="username" required>
         <label for="password">password</label>
-        <input type="password" name="password" id="password">
-        <input type="submit" value="Login">
+        <input type="password" name="password" id="password" [(ngModel)]="password" required>
+        <input type="submit" value="Login" [disabled]="!loginForm.form.valid">
     </form>
 </div>

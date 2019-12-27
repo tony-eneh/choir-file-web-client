@@ -10,3 +10,5 @@ f. Song Details
 g. Selections List
 h. Selection Details
 i. Profile pages
+
+3. Create a new api endpoint on server for authentication of user login @ apiUrl/login
