@@ -14,6 +14,12 @@ import { SelectionDetailsComponent } from './selection-details/selection-details
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { LoginAuthenticatorService } from './login-authenticator.service';
+import { DockerComponent } from './docker/docker.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { SongListComponent } from './song-list/songs.component';
+import { SongDetailsComponent } from './song-details/song-details.component';
+import { ChoirsListComponent } from './choirs-list/choirs-list.component';
+import { ChoirsDetailsComponent } from './choirs-details/choirs-details.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +29,13 @@ import { LoginAuthenticatorService } from './login-authenticator.service';
     SelectionsListComponent,
     SelectionDetailsComponent,
     PageNotFoundComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    DockerComponent,
+    DashboardComponent,
+    SongListComponent,
+    SongDetailsComponent,
+    ChoirsListComponent,
+    ChoirsDetailsComponent
   ],
   imports: [
     BrowserModule,

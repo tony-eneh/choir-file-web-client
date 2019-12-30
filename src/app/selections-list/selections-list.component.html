@@ -1,8 +1,12 @@
-<ul>
-    <li *ngFor="let selection of selections; let i = index" [routerLink]="selection._id">
-      <span>{{i+1}}</span>&nbsp;
-      <span>{{selection.event}} Selection</span>&nbsp;
-      <span>for {{selection.venue}}</span>&nbsp;
-      <span>Date: {{selection.date}}</span>
-    </li>
-</ul>
+<div class="selections">
+    <app-docker></app-docker>
+    <ul>
+        <li *ngFor="let selection of selections; let i = index" [routerLink]="selection._id">
+            <span>{{i+1}}</span>&nbsp;
+            <span>{{selection.event}} Selection</span>&nbsp;
+            <span>for {{selection.venue}}</span>&nbsp;
+            <span>Date: {{selection.date}}</span>
+        </li>
+    </ul>
+
+</div>
