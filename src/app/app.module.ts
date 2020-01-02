@@ -20,6 +20,7 @@ import { SongListComponent } from './song-list/songs.component';
 import { SongDetailsComponent } from './song-details/song-details.component';
 import { ChoirsListComponent } from './choirs-list/choirs-list.component';
 import { ChoirsDetailsComponent } from './choirs-details/choirs-details.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ChoirsDetailsComponent } from './choirs-details/choirs-details.componen
     SongListComponent,
     SongDetailsComponent,
     ChoirsListComponent,
-    ChoirsDetailsComponent
+    ChoirsDetailsComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

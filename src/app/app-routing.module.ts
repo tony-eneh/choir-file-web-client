@@ -12,6 +12,7 @@ import { ChoirsListComponent } from './choirs-list/choirs-list.component';
 import { ChoirsDetailsComponent } from './choirs-details/choirs-details.component';
 import { SongListComponent } from './song-list/songs.component';
 import { SongDetailsComponent } from './song-details/song-details.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path: 'choirs/:id', component: ChoirsDetailsComponent},
   {path: 'songs', component: SongListComponent},
   {path: 'songs/:id', component: SongDetailsComponent},
+  {path: 'users/:id', component: ProfileComponent},
   {path: '', component: WelcomeComponent, pathMatch:'full'},
   {path: '**', component: PageNotFoundComponent}
 ];
